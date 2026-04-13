@@ -13,7 +13,7 @@ A simple AI-powered tool that scrapes any website and summarizes it using a loca
 ---
 
 ## 💡 How It Works
-1. Takes any URL as input
+1. Takes any URL as input from the user.
 2. Scrapes and cleans the webpage text
 3. Sends it to a local LLM (TinyLlama via Ollama)
 4. Returns a clean 5-bullet summary
