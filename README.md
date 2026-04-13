@@ -1,30 +1,45 @@
 # 🌐 Website Summarizer
 
-A simple AI-powered tool that scrapes any website and summarizes it using a local LLM — built entirely with free and open-source tools.
+An AI-powered tool that scrapes any website and summarizes it using a local LLM — built entirely with free and open-source tools.
+
+---
+
+## 📸 Demo
+![Website Summarizer Demo](screenshot.png)
+
+---
+
+## ✨ Features
+- 🔗 Summarize single or multiple URLs at once
+- 🎯 Choose summary style — bullet points, paragraph, or key facts
+- 💾 Save all summaries to a text file
+- 🖥️ Clean web UI built with Streamlit
+- 🤖 Runs 100% locally — no API key, no cost, no internet needed after setup
 
 ---
 
 ## 🛠️ Tech Stack
 - **Python** — core language
 - **BeautifulSoup4** — web scraping
-- **Ollama + TinyLlama** — local AI summarization (free, runs offline)
-- **Jupyter Notebook** — development environment
+- **Ollama + TinyLlama** — local AI summarization
+- **Streamlit** — web interface
+- **Jupyter Notebook** — prototyping
 
 ---
 
 ## 💡 How It Works
-1. Takes any URL as input from the user.
-2. Scrapes and cleans the webpage text
-3. Sends it to a local LLM (TinyLlama via Ollama)
-4. Returns a clean 5-bullet summary
+1. User enters one or multiple URLs
+2. BeautifulSoup scrapes and cleans the webpage text
+3. Text is sent to TinyLlama running locally via Ollama
+4. Clean summary is displayed in the browser
 
 ---
 
-## 🚀 How To Run This Project
+## 🚀 How To Run
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/yourusername/website-summarizer.git
+git clone https://github.com/divyamk521/website-summarizer.git
 cd website-summarizer
 ```
 
@@ -45,22 +60,31 @@ pip install -r requirements.txt
 ollama pull tinyllama
 ```
 
-**5. Run the notebook**
-- Open `summarizer.ipynb` in VS Code and run all cells
+**5. Run the app**
+```bash
+streamlit run app.py
+```
+
+---
+
+## ⚠️ Limitations
+- JavaScript-heavy sites like YouTube or Instagram won't work
+- Works best with Wikipedia, blogs, and news articles
 
 ---
 
 ## 📁 Project Structure
 website-summarizer/
-├── venv/                  # virtual environment (not pushed to GitHub)
-├── summarizer.ipynb       # main notebook
-├── requirements.txt       # dependencies
-└── README.md              # you are here
+├── venv/
+├── app.py                 # Streamlit web app
+├── summarizer.ipynb       # original notebook
+├── summaries.txt          # saved summaries output
+├── requirements.txt
+└── README.md
 
 ---
 
 ## 🙋‍♀️ Author
-**Divya M K** — [GitHub](https://github.com/divyamk521) 
-<!-- | [LinkedIn](https://linkedin.com/in/yourprofile) -->
+**Divya** — [GitHub](https://github.com/divyamk521)
 
-> 🌱 First project in my AI/ML learning journey
+> 🌱First project in my AI/ML learning journey
